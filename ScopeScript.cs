@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scope : MonoBehaviour
+public class ScopeScript : MonoBehaviour
 {
     public GameObject ZoomedScope;
     public GameObject Sniper;
+    public GameObject ScopeImage;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +31,14 @@ public class Scope : MonoBehaviour
     void ZoomIn()
     {
         Sniper.SetActive(false);
+        ScopeImage.SetActive(true);
         ZoomedScope.SetActive(true);
     }
 
     void ZoomOut()
     {
         Sniper.SetActive(true);
+        ScopeImage.SetActive(false);
         ZoomedScope.SetActive(false);
     }
 }
